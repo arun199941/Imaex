@@ -1,0 +1,35 @@
+<%- include('header') -%>
+<% if (flash.length) { %>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong><%= flash %> </strong> 
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+ 
+<% } %>
+<body>
+  <center>
+    <form method="post">
+      <div class="form-group" enctype="multipart/form-data">
+        <input
+          required
+          type="file"
+          placeholder="Upload File"
+          class="form-control"
+          name="image"
+        />
+      </div>
+      <button type="submit" class="btn btn-secondary">Convert Text</button>
+    </form>
+    <div class="form-group">
+      <textarea
+        class="form-control"
+        readonly
+        style="margin-top: 0px; margin-bottom: 0px; height: 283px; resize: none"
+      ></textarea>
+    </div>
+  </center>
+</body>
+
+<%- include('footer') -%>
