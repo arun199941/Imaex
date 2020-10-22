@@ -6,6 +6,7 @@ const port = 3000;
 const bodyParser = require("body-parser");
 const flash = require("flash");
 var session = require("express-session");
+import Tesseract from 'tesseract.js';
 
 // Setting up Express Js
 app.set("view engine", "ejs");
